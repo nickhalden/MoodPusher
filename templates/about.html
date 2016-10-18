@@ -2,5 +2,24 @@
 
 {% block content %}
 
+{% with infos= get_flashed_messages(category_filter=["info"]) %}
+    {% if infos %}
 
+        {% for message in infos %}
+            <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-label="testing"></span></button>
+            {{ message }}
+            </div>
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
 {% endblock %}
+
+
+<h2>About the same applicatcation </h2>
+
+<p>During the course we will creawte a RestFil web api which would be used py a Professional Huntiong Compyany
+,stroring data avout prodessionals ,ccanidates,bos and clintes and contrackts
+</p>

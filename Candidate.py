@@ -1,3 +1,4 @@
+
 class Candidate:
     __first_name=None
     __last_name= None
